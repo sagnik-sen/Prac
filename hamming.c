@@ -5,14 +5,13 @@
 #include <unistd.h>
 #include <arpa/inet.h>
 
-#define PORT 8080
+#define PORT 8082
+#define BUFFER_SIZE 1024
 
 int main() {
-
     int sock;
     struct sockaddr_in addr;
-
-    char codeword[] = "10101100101";
+    char codeword[] = "10101100101";   // Given Hamming encoded data
 
     sock = socket(AF_INET, SOCK_STREAM, 0);
 
